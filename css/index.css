@@ -1,4 +1,52 @@
 .flex-container {
-  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
+.flex-container > header {
+  padding: 2%;
+  margin: 2%;
+}
+
+.flex-container > header > h1 {
+  font-size: 3.5rem;
+}
+
+.timer {
+  padding: 10%;
+  margin: 10% 30% 10% 30% ;
+  border: 12px solid rgba(28,110,164,0.85);
+  border-radius: 11px;
+}
+
+.timer > #timerNumber {
+  font-size: 4rem;
+}
+
+.timerButtons {
+  margin: 10% auto;
+}
+
+.restButton {
+  margin: auto 10%;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 11px;
+  box-shadow: 0 9px #999;
+}
+
+.restButton:hover {background-color: #3e8e41}
+
+.restButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} 
