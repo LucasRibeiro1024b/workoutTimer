@@ -1,20 +1,26 @@
+var bInterval = false;
+
 function timer() {
-  var time;
+  var iTime;
   if (this.id == "shortRestButton"){
-    time = 45;
+    iTime = 45;
   }
   if (this.id == "longRestButton"){
-    time = 180;
+    iTime = 180;
   }
 
-  interval = setInterval(function () {
-    timerValue.innerHTML = time;
-    time -= 1;
-
-    if (time < 0) {
-      clearInterval(interval);
-    }
-  }, 1000);
+  if (!bInterval) {
+    interval = setInterval(function () {
+      bInterval = true;
+      timerValue.innerHTML = iTime;
+      iTime -= 1;
+  
+      if (iTime < 0) {
+        bInterval = false;
+        clearInterval(interval);
+      }
+    }, 1000);
+  }
 }
 
 timerValue = document.getElementById("timerNumber");
