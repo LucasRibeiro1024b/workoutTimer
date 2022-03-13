@@ -16,6 +16,8 @@ function timer() {
       iTime -= 1;
   
       if (iTime < 0) {
+        timerValue.innerHTML = "";
+        audioPlayer.play();
         bInterval = false;
         clearInterval(interval);
       }
@@ -24,9 +26,10 @@ function timer() {
 }
 
 var timerValue = document.getElementById("timerNumber");
-
 var shortRestButon = document.getElementById("shortRestButton");
 var longRestButon = document.getElementById("longRestButton");
 
 shortRestButon.addEventListener("click", timer);
 longRestButon.addEventListener("click", timer);
+
+var audioPlayer = document.getElementById("audio");
