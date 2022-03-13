@@ -23,10 +23,10 @@ function timer() {
   }
 }
 
-timerValue = document.getElementById("timerNumber");
+var timerValue = document.getElementById("timerNumber");
 
-shortRestButon = document.getElementById("shortRestButton");
-longRestButon = document.getElementById("longRestButton");
+var shortRestButon = document.getElementById("shortRestButton");
+var longRestButon = document.getElementById("longRestButton");
 
 shortRestButon.addEventListener("click", timer);
 longRestButon.addEventListener("click", timer);
